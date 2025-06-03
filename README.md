@@ -1,8 +1,12 @@
 # @rocicorp/heap-snapshot
 
-For reasons I don't entirely understand the snapshots from the `v8.writeHeapSnapshot()` API that is accessible via `chrome-remote-interface` lack many Zero objects that are found via the `HeapProfiler` interface's dumps.
+It is often the case that we need to get a heap snapshot from running `zero-cache` processes.
 
-This tool automates using `HeapProfiler` to create a dump via CLI.
+Online guides and documentation suggest using the `chrome-remote-interface` package and then calling `v8.writeHeapSnapshot()`.
+
+Doing this yields much smaller snapshots than those you get if you connect to the node process in Chrome's devtools and get a snapshot that way. These smaller snapshots lack many core classes of zero-cache such as `ViewSyncer`. I do not understand why but ChatGPT suggests that the implementation is different and simpler than the `HeapProfiler` class that Chrome itself uses, and misses some "uncommon" allocation patterns 😬.
+
+This tool automates using the lower-level `HeapProfiler` class to create a dump that contains all of Zero's objects.
 
 ## Usage
 
