@@ -12,6 +12,6 @@ This tool automates using the lower-level `HeapProfiler` class to create a dump 
 
 ## Usage
 
-1. kill -USR1 <pid-to-profile>
-2. The process prints out a message like: `Debugger listening on ws://127.0.0.1:9229/a8712980-d35d-434f-824c-db212b277b5e`
+1. `kill -USR1 <pid-to-snapshot>`
+2. The targetted process prints out a message like: `Debugger listening on ws://127.0.0.1:9229/a8712980-d35d-434f-824c-db212b277b5e`
 3. `npx @rocicorp/heap-snapshot <that-url>`
