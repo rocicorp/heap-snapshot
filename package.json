@@ -1,0 +1,25 @@
+{
+  "name": "@rocicorp/heap-snapshot",
+  "version": "1.0.0",
+  "description": "A CLI tool to take heap snapshots from a Chrome DevTools Protocol target.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "heap-snapshot": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heap",
+    "snapshot",
+    "profiler",
+    "chrome",
+    "devtools"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-remote-interface": "^0.33.0"
+  }
+} 
