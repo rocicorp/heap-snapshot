@@ -1,6 +1,6 @@
 {
   "name": "@rocicorp/heap-snapshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to take heap snapshots from a Chrome DevTools Protocol target.",
   "main": "index.js",
   "type": "module",
