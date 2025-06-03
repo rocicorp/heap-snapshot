@@ -1,6 +1,8 @@
 # @rocicorp/heap-snapshot
 
-Takes a better snapshot of the v8 heap of a running process than what you get from `v8.writeSnapshot()`.
+For reasons I don't entirely understand the snapshots from the `v8.writeHeapSnapshot()` API that is accessible via `chrome-remote-interface` lack many Zero objects that are found via the `HeapProfiler` interface's dumps.
+
+This tool automates using `HeapProfiler` to create a dump via CLI.
 
 ## Usage
 
